@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { MatButtonToggleChange } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
   minutes = 0;
@@ -12,12 +13,20 @@ export class AppComponent {
   inc(i: number) {
     this.minutes = Math.min(5, Math.max(0, this.minutes + i));
   }
-  male() { this.gender = 'male'; }
-  female() { this.gender = 'female'; }
-  other() { this.gender = 'other'; }
+  male() {
+    this.gender = 'male';
+  }
+  female() {
+    this.gender = 'female';
+  }
+  other() {
+    this.gender = 'other';
+  }
+
+  onWeatherChange(event: MatButtonToggleChange) {
+    console.log('onWeatherChange', event.value);
+  }
 }
-
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

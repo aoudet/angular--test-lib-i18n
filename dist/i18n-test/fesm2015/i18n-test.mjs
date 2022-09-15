@@ -1,6 +1,7 @@
 import '@angular/localize/init';
 import * as i0 from '@angular/core';
 import { Injectable, Component, NgModule } from '@angular/core';
+import { MatCommonModule } from '@angular/material/core';
 
 class I18nTestService {
     constructor() { }
@@ -36,21 +37,21 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImpor
   ` }]
         }], ctorParameters: function () { return []; } });
 
+// import { WeatherComponent } from './weather/weather.component';
 class I18nTestModule {
 }
 I18nTestModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-I18nTestModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, declarations: [I18nTestComponent], exports: [I18nTestComponent] });
-I18nTestModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule });
+I18nTestModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, declarations: [I18nTestComponent], imports: [MatCommonModule], exports: [I18nTestComponent] });
+I18nTestModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, imports: [MatCommonModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, decorators: [{
             type: NgModule,
             args: [{
-                    declarations: [
-                        I18nTestComponent
+                    declarations: [I18nTestComponent],
+                    imports: [
+                        MatCommonModule,
+                        // MatButtonToggleModule
                     ],
-                    imports: [],
-                    exports: [
-                        I18nTestComponent
-                    ]
+                    exports: [I18nTestComponent],
                 }]
         }] });
 
