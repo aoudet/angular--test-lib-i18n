@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-// import { FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
 
-// import { debounceTime } from 'rxjs/operators';
+import { debounceTime } from 'rxjs/operators';
 
 import { WeatherEnum } from './enums/weather-enum';
 
@@ -25,19 +25,19 @@ export class WeatherComponent implements OnInit {
   };
   @Output() changed = new EventEmitter<IWeather>();
 
-  // temp: FormControl;
+  temp: FormControl;
   weatherEnum = WeatherEnum;
 
   constructor() {
-    // this.temp = new FormControl<number | undefined>(undefined);
+    this.temp = new FormControl<number | undefined>(undefined);
   }
 
   ngOnInit(): void {
-    // this.temp.setValue(this.weather.temperature);
-    // this.temp.valueChanges.pipe(debounceTime(50)).subscribe((data) => {
-    //   this.weather.temperature = data || undefined;
-    //   this.changed.emit(this.weather);
-    // });
+    this.temp.setValue(this.weather.temperature);
+    this.temp.valueChanges.pipe(debounceTime(50)).subscribe((data) => {
+      this.weather.temperature = data || undefined;
+      this.changed.emit(this.weather);
+    });
   }
 
   onWeatherChange(event: MatButtonToggleChange) {

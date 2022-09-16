@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
+import { IWeather, WeatherEnum } from 'i18n-test';
 
 @Component({
   selector: 'app-root',
@@ -23,8 +24,12 @@ export class AppComponent {
     this.gender = 'other';
   }
 
-  onWeatherChange(event: MatButtonToggleChange) {
-    console.log('onWeatherChange', event.value);
+  weather: IWeather = {
+    temperature: 22,
+    type: [WeatherEnum.cloud],
+  };
+  onWeatherChange(event: IWeather) {
+    console.log('onWeatherChange', event);
   }
 }
 

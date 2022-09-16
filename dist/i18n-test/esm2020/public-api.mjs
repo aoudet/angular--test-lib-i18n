@@ -1,8 +1,0 @@
-import '@angular/localize/init';
-/*
- * Public API Surface of i18n-test
- */
-export * from './lib/i18n-test.service';
-export * from './lib/i18n-test.component';
-export * from './lib/i18n-test.module';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL2kxOG4tdGVzdC9zcmMvcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLHdCQUF3QixDQUFDO0FBQ2hDOztHQUVHO0FBRUgsY0FBYyx5QkFBeUIsQ0FBQztBQUN4QyxjQUFjLDJCQUEyQixDQUFDO0FBQzFDLGNBQWMsd0JBQXdCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJ0Bhbmd1bGFyL2xvY2FsaXplL2luaXQnO1xuLypcbiAqIFB1YmxpYyBBUEkgU3VyZmFjZSBvZiBpMThuLXRlc3RcbiAqL1xuXG5leHBvcnQgKiBmcm9tICcuL2xpYi9pMThuLXRlc3Quc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9pMThuLXRlc3QuY29tcG9uZW50JztcbmV4cG9ydCAqIGZyb20gJy4vbGliL2kxOG4tdGVzdC5tb2R1bGUnO1xuIl19

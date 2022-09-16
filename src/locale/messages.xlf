@@ -3,9 +3,7 @@
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="introductionHeader" datatype="html">
-        <source>
-  Hello i18n!
-</source>
+        <source>Hello i18n!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">3</context>
@@ -52,8 +50,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="3967965900462880190" datatype="html">
-        <source>Updated: <x id="ICU" equiv-text="{minutes, plural, =0 {...} =1 {...} other {...}}"/>
-</source>
+        <source>Updated: <x id="ICU" equiv-text="{minutes, plural, =0 {...} =1 {...} other {...}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -65,6 +62,13 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">30</context>
         </context-group>
+      </trans-unit>
+      
+      <trans-unit id="Resx.WeatherExtension.Temperature" datatype="html">
+        <source>Temperature</source>       
+      </trans-unit>
+      <trans-unit id="Resx.WeatherExtension.Celcius" datatype="html">
+        <source>F</source>       
       </trans-unit>
     </body>
   </file>
