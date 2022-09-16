@@ -1,6 +1,6 @@
 import '@angular/localize/init';
 import * as i0 from '@angular/core';
-import { Injectable, Component, EventEmitter, Input, Output, NgModule } from '@angular/core';
+import { EventEmitter, Component, Input, Output, NgModule } from '@angular/core';
 import * as i2 from '@angular/forms';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
@@ -11,40 +11,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import * as i4 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
 import { MatCommonModule } from '@angular/material/core';
-
-class I18nTestService {
-    constructor() { }
-}
-I18nTestService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
-I18nTestService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestService, providedIn: 'root' });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestService, decorators: [{
-            type: Injectable,
-            args: [{
-                    providedIn: 'root'
-                }]
-        }], ctorParameters: function () { return []; } });
-
-class I18nTestComponent {
-    constructor() {
-        this.test = '';
-        // this.test = $localize`@@5206857922697139278:test007`;
-    }
-    ngOnInit() { }
-}
-I18nTestComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-I18nTestComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.2.2", type: I18nTestComponent, selector: "lib-i18n-test", ngImport: i0, template: `
-    <h3>{{test}}</h3>
-    <p>i18n-test works!</p>
-    <span i18n="@@5206857922697139278">5206857922697139278</span>
-  `, isInline: true });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestComponent, decorators: [{
-            type: Component,
-            args: [{ selector: 'lib-i18n-test', template: `
-    <h3>{{test}}</h3>
-    <p>i18n-test works!</p>
-    <span i18n="@@5206857922697139278">5206857922697139278</span>
-  ` }]
-        }], ctorParameters: function () { return []; } });
 
 var WeatherEnum;
 (function (WeatherEnum) {
@@ -96,11 +62,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImpor
 class I18nTestModule {
 }
 I18nTestModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-I18nTestModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, declarations: [I18nTestComponent, WeatherComponent], imports: [MatCommonModule,
+I18nTestModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, declarations: [WeatherComponent], imports: [MatCommonModule,
         MatButtonToggleModule,
         ReactiveFormsModule,
         MatFormFieldModule,
-        MatInputModule], exports: [I18nTestComponent, WeatherComponent] });
+        MatInputModule], exports: [WeatherComponent] });
 I18nTestModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, imports: [MatCommonModule,
         MatButtonToggleModule,
         ReactiveFormsModule,
@@ -109,7 +75,7 @@ I18nTestModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version:
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, decorators: [{
             type: NgModule,
             args: [{
-                    declarations: [I18nTestComponent, WeatherComponent],
+                    declarations: [WeatherComponent],
                     imports: [
                         MatCommonModule,
                         MatButtonToggleModule,
@@ -117,7 +83,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImpor
                         MatFormFieldModule,
                         MatInputModule,
                     ],
-                    exports: [I18nTestComponent, WeatherComponent],
+                    exports: [WeatherComponent],
                 }]
         }] });
 
@@ -125,5 +91,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { I18nTestComponent, I18nTestModule, I18nTestService, WeatherComponent, WeatherEnum };
+export { I18nTestModule, WeatherComponent, WeatherEnum };
 //# sourceMappingURL=i18n-test.mjs.map
