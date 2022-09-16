@@ -1,0 +1,10 @@
+import '@angular/localize/init';
+/*
+ * Public API Surface of i18n-test
+ */
+export * from './lib/i18n-test.service';
+export * from './lib/i18n-test.component';
+export * from './lib/weather/weather.component';
+export * from './lib/weather/enums/weather-enum';
+export * from './lib/i18n-test.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL2kxOG4tdGVzdC9zcmMvcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLHdCQUF3QixDQUFDO0FBQ2hDOztHQUVHO0FBRUgsY0FBYyx5QkFBeUIsQ0FBQztBQUN4QyxjQUFjLDJCQUEyQixDQUFDO0FBQzFDLGNBQWMsaUNBQWlDLENBQUM7QUFDaEQsY0FBYyxrQ0FBa0MsQ0FBQztBQUNqRCxjQUFjLHdCQUF3QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICdAYW5ndWxhci9sb2NhbGl6ZS9pbml0Jztcbi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2YgaTE4bi10ZXN0XG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvaTE4bi10ZXN0LnNlcnZpY2UnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvaTE4bi10ZXN0LmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi93ZWF0aGVyL3dlYXRoZXIuY29tcG9uZW50JztcbmV4cG9ydCAqIGZyb20gJy4vbGliL3dlYXRoZXIvZW51bXMvd2VhdGhlci1lbnVtJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL2kxOG4tdGVzdC5tb2R1bGUnO1xuIl19

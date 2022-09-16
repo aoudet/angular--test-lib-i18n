@@ -1,0 +1,31 @@
+{
+  "name": "i18n-test",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/i18n-test.mjs",
+  "es2020": "fesm2020/i18n-test.mjs",
+  "esm2020": "esm2020/i18n-test.mjs",
+  "fesm2020": "fesm2020/i18n-test.mjs",
+  "fesm2015": "fesm2015/i18n-test.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/i18n-test.mjs",
+      "es2020": "./fesm2020/i18n-test.mjs",
+      "es2015": "./fesm2015/i18n-test.mjs",
+      "node": "./fesm2015/i18n-test.mjs",
+      "default": "./fesm2020/i18n-test.mjs"
+    }
+  },
+  "sideEffects": false
+}

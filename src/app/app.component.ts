@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { IWeather, WeatherEnum } from 'i18n-test';
 
 @Component({
