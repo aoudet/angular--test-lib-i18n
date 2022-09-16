@@ -13,6 +13,7 @@ export declare class WeatherComponent implements OnInit {
     changed: EventEmitter<IWeather>;
     temp: FormControl;
     weatherEnum: typeof WeatherEnum;
+    tt: string;
     constructor();
     ngOnInit(): void;
     onWeatherChange(event: MatButtonToggleChange): void;

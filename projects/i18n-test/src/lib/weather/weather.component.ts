@@ -27,8 +27,10 @@ export class WeatherComponent implements OnInit {
 
   temp: FormControl;
   weatherEnum = WeatherEnum;
+  tt: string = '';
 
   constructor() {
+    this.tt = $localize`:@@Resx.WeatherExtension.Celcius:@@Resx.WeatherExtension.Celcius`;
     this.temp = new FormControl<number | undefined>(undefined);
   }
 
