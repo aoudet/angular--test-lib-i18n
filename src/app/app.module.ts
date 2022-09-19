@@ -1,11 +1,21 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { I18nTestModule } from 'i18n-test';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
-  imports: [BrowserModule, I18nTestModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    CommonModule,
+
+    I18nTestModule,
+  ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })

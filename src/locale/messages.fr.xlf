@@ -78,6 +78,14 @@
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="Resx.WeatherExtension.Temperature" datatype="html">
+        <source>Temperature</source>  
+        <target>la temperature</target>     
+      </trans-unit>
+      <trans-unit id="Resx.WeatherExtension.Celcius" datatype="html">
+        <source>F</source>  
+        <target>Celcius</target>         
+      </trans-unit>
     </body>
   </file>
 </xliff>

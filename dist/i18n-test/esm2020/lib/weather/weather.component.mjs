@@ -1,28 +1,13 @@
-import '@angular/localize/init';
-import * as i0 from '@angular/core';
-import { EventEmitter, Component, Input, Output, NgModule } from '@angular/core';
-import * as i2 from '@angular/forms';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
-import * as i1 from '@angular/material/button-toggle';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import * as i3 from '@angular/material/form-field';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import * as i4 from '@angular/material/input';
-import { MatInputModule } from '@angular/material/input';
-import { MatCommonModule } from '@angular/material/core';
-
-var WeatherEnum;
-(function (WeatherEnum) {
-    WeatherEnum[WeatherEnum["none"] = 0] = "none";
-    WeatherEnum[WeatherEnum["sun"] = 1] = "sun";
-    WeatherEnum[WeatherEnum["cloud"] = 2] = "cloud";
-    WeatherEnum[WeatherEnum["rain"] = 4] = "rain";
-    WeatherEnum[WeatherEnum["snow"] = 8] = "snow";
-    WeatherEnum[WeatherEnum["variable"] = 16] = "variable";
-})(WeatherEnum || (WeatherEnum = {}));
-
-class WeatherComponent {
+import { WeatherEnum } from './enums/weather-enum';
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/material/button-toggle";
+import * as i2 from "@angular/forms";
+import * as i3 from "@angular/material/form-field";
+import * as i4 from "@angular/material/input";
+export class WeatherComponent {
     constructor() {
         this.multiple = false;
         this.weather = {
@@ -62,38 +47,4 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImpor
             }], changed: [{
                 type: Output
             }] } });
-
-class I18nTestModule {
-}
-I18nTestModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-I18nTestModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, declarations: [WeatherComponent], imports: [MatCommonModule,
-        MatButtonToggleModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule], exports: [WeatherComponent] });
-I18nTestModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, imports: [MatCommonModule,
-        MatButtonToggleModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: I18nTestModule, decorators: [{
-            type: NgModule,
-            args: [{
-                    declarations: [WeatherComponent],
-                    imports: [
-                        MatCommonModule,
-                        MatButtonToggleModule,
-                        ReactiveFormsModule,
-                        MatFormFieldModule,
-                        MatInputModule,
-                    ],
-                    exports: [WeatherComponent],
-                }]
-        }] });
-
-/**
- * Generated bundle index. Do not edit.
- */
-
-export { I18nTestModule, WeatherComponent, WeatherEnum };
-//# sourceMappingURL=i18n-test.mjs.map
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2VhdGhlci5jb21wb25lbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9wcm9qZWN0cy9pMThuLXRlc3Qvc3JjL2xpYi93ZWF0aGVyL3dlYXRoZXIuY29tcG9uZW50LnRzIiwiLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvaTE4bi10ZXN0L3NyYy9saWIvd2VhdGhlci93ZWF0aGVyLmNvbXBvbmVudC5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxTQUFTLEVBQUUsWUFBWSxFQUFFLEtBQUssRUFBVSxNQUFNLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFDL0UsT0FBTyxFQUFFLFdBQVcsRUFBRSxNQUFNLGdCQUFnQixDQUFDO0FBSTdDLE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSxnQkFBZ0IsQ0FBQztBQUU5QyxPQUFPLEVBQUUsV0FBVyxFQUFFLE1BQU0sc0JBQXNCLENBQUM7Ozs7OztBQVluRCxNQUFNLE9BQU8sZ0JBQWdCO0lBWTNCO1FBWFMsYUFBUSxHQUFZLEtBQUssQ0FBQztRQUMxQixZQUFPLEdBQWE7WUFDM0IsV0FBVyxFQUFFLFNBQVM7WUFDdEIsSUFBSSxFQUFFLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQztTQUN6QixDQUFDO1FBQ1EsWUFBTyxHQUFHLElBQUksWUFBWSxFQUFZLENBQUM7UUFHakQsZ0JBQVcsR0FBRyxXQUFXLENBQUM7UUFDMUIsT0FBRSxHQUFXLEVBQUUsQ0FBQztRQUdkLDJGQUEyRjtRQUMzRixtQkFBbUI7UUFDbkIsSUFBSSxDQUFDLEVBQUUsR0FBRyxTQUFTLENBQUEsa0VBQWtFLENBQUM7UUFDdEYsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLFdBQVcsQ0FBcUIsU0FBUyxDQUFDLENBQUM7SUFDN0QsQ0FBQztJQUVELFFBQVE7UUFDTixJQUFJLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxDQUFDO1FBQzdDLElBQUksQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxJQUFJLEVBQUUsRUFBRTtZQUMvRCxJQUFJLENBQUMsT0FBTyxDQUFDLFdBQVcsR0FBRyxJQUFJLElBQUksU0FBUyxDQUFDO1lBQzdDLElBQUksQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUNsQyxDQUFDLENBQUMsQ0FBQztJQUNMLENBQUM7SUFFRCxlQUFlLENBQUMsS0FBNEI7UUFDMUMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxpQkFBaUIsRUFBRSxLQUFLLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDNUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLEdBQUcsS0FBSyxDQUFDLEtBQUssQ0FBQztRQUNoQyxJQUFJLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUM7SUFDbEMsQ0FBQzs7NkdBL0JVLGdCQUFnQjtpR0FBaEIsZ0JBQWdCLDBJQ25CN0IsNnJEQTRDQTsyRkR6QmEsZ0JBQWdCO2tCQUw1QixTQUFTOytCQUNFLGFBQWE7MEVBS2QsUUFBUTtzQkFBaEIsS0FBSztnQkFDRyxPQUFPO3NCQUFmLEtBQUs7Z0JBSUksT0FBTztzQkFBaEIsTUFBTSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgRXZlbnRFbWl0dGVyLCBJbnB1dCwgT25Jbml0LCBPdXRwdXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IEZvcm1Db250cm9sIH0gZnJvbSAnQGFuZ3VsYXIvZm9ybXMnO1xuXG5pbXBvcnQgeyBNYXRCdXR0b25Ub2dnbGVDaGFuZ2UgfSBmcm9tICdAYW5ndWxhci9tYXRlcmlhbC9idXR0b24tdG9nZ2xlJztcblxuaW1wb3J0IHsgZGVib3VuY2VUaW1lIH0gZnJvbSAncnhqcy9vcGVyYXRvcnMnO1xuXG5pbXBvcnQgeyBXZWF0aGVyRW51bSB9IGZyb20gJy4vZW51bXMvd2VhdGhlci1lbnVtJztcblxuZXhwb3J0IGludGVyZmFjZSBJV2VhdGhlciB7XG4gIHRlbXBlcmF0dXJlOiBudW1iZXIgfCB1bmRlZmluZWQ7XG4gIHR5cGU6IFdlYXRoZXJFbnVtW107XG59XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2xpYi13ZWF0aGVyJyxcbiAgdGVtcGxhdGVVcmw6ICcuL3dlYXRoZXIuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi93ZWF0aGVyLmNvbXBvbmVudC5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgV2VhdGhlckNvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCB7XG4gIEBJbnB1dCgpIG11bHRpcGxlOiBib29sZWFuID0gZmFsc2U7XG4gIEBJbnB1dCgpIHdlYXRoZXI6IElXZWF0aGVyID0ge1xuICAgIHRlbXBlcmF0dXJlOiB1bmRlZmluZWQsXG4gICAgdHlwZTogW1dlYXRoZXJFbnVtLm5vbmVdLFxuICB9O1xuICBAT3V0cHV0KCkgY2hhbmdlZCA9IG5ldyBFdmVudEVtaXR0ZXI8SVdlYXRoZXI+KCk7XG5cbiAgdGVtcDogRm9ybUNvbnRyb2w7XG4gIHdlYXRoZXJFbnVtID0gV2VhdGhlckVudW07XG4gIHR0OiBzdHJpbmcgPSAnJztcblxuICBjb25zdHJ1Y3RvcigpIHtcbiAgICAvLyBoZXJlIGlzIGEgdGVzdCB3aXRoIGEgY2FsbCB0byAkbG9jYWxpemUgZ2xvYmFsIGZ1bmN0aW9uLCBuZWVkZWQgdG8gYnVpbGQgY3VzdG9tIGVycm9yIG9yXG4gICAgLy8gcGFyYW1zIGVycm9ycy4uLlxuICAgIHRoaXMudHQgPSAkbG9jYWxpemVgOkBAUmVzeC5XZWF0aGVyRXh0ZW5zaW9uLkNlbGNpdXM6QEBSZXN4LldlYXRoZXJFeHRlbnNpb24uQ2VsY2l1c2A7XG4gICAgdGhpcy50ZW1wID0gbmV3IEZvcm1Db250cm9sPG51bWJlciB8IHVuZGVmaW5lZD4odW5kZWZpbmVkKTtcbiAgfVxuXG4gIG5nT25Jbml0KCk6IHZvaWQge1xuICAgIHRoaXMudGVtcC5zZXRWYWx1ZSh0aGlzLndlYXRoZXIudGVtcGVyYXR1cmUpO1xuICAgIHRoaXMudGVtcC52YWx1ZUNoYW5nZXMucGlwZShkZWJvdW5jZVRpbWUoNTApKS5zdWJzY3JpYmUoKGRhdGEpID0+IHtcbiAgICAgIHRoaXMud2VhdGhlci50ZW1wZXJhdHVyZSA9IGRhdGEgfHwgdW5kZWZpbmVkO1xuICAgICAgdGhpcy5jaGFuZ2VkLmVtaXQodGhpcy53ZWF0aGVyKTtcbiAgICB9KTtcbiAgfVxuXG4gIG9uV2VhdGhlckNoYW5nZShldmVudDogTWF0QnV0dG9uVG9nZ2xlQ2hhbmdlKSB7XG4gICAgY29uc29sZS5sb2coJ29uV2VhdGhlckNoYW5nZScsIGV2ZW50LnZhbHVlKTtcbiAgICB0aGlzLndlYXRoZXIudHlwZSA9IGV2ZW50LnZhbHVlO1xuICAgIHRoaXMuY2hhbmdlZC5lbWl0KHRoaXMud2VhdGhlcik7XG4gIH1cbn1cbiIsIjxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgPG1hdC1mb3JtLWZpZWxkIGNsYXNzPVwidGVtcGVyYXR1cmVMYWJlbFwiPlxuICAgIDxtYXQtbGFiZWwgaTE4bj1cIkBAUmVzeC5XZWF0aGVyRXh0ZW5zaW9uLlRlbXBlcmF0dXJlXCJcbiAgICAgID5SZXN4LldlYXRoZXJFeHRlbnNpb24uVGVtcGVyYXR1cmU8L21hdC1sYWJlbFxuICAgID5cbiAgICA8aW5wdXQgbWF0SW5wdXQgdHlwZT1cIm51bWJlclwiIFtmb3JtQ29udHJvbF09XCJ0ZW1wXCIgLz5cbiAgICA8c3BhbiBtYXRTdWZmaXggaTE4bj1cIkBAUmVzeC5XZWF0aGVyRXh0ZW5zaW9uLkNlbGNpdXNcIlxuICAgICAgPlJlc3guV2VhdGhlckV4dGVuc2lvbi5DZWxjaXVzPC9zcGFuXG4gICAgPlxuICA8L21hdC1mb3JtLWZpZWxkPlxuXG4gIDxwPmFzc2V0cyB3ZXJlIGxlZnQgdW5kb25lLCBzbyBsb29rdXBzIG9uIGltZyBmYWlsIGFzIGV4cGVjdGVkPC9wPlxuICA8ZGl2PlxuICAgIDxtYXQtYnV0dG9uLXRvZ2dsZS1ncm91cFxuICAgICAgI2dyb3VwPVwibWF0QnV0dG9uVG9nZ2xlR3JvdXBcIlxuICAgICAgW3ZhbHVlXT1cIndlYXRoZXIudHlwZVwiXG4gICAgICBbbXVsdGlwbGVdPVwibXVsdGlwbGVcIlxuICAgICAgKGNoYW5nZSk9XCJvbldlYXRoZXJDaGFuZ2UoJGV2ZW50KVwiXG4gICAgPlxuICAgICAgPG1hdC1idXR0b24tdG9nZ2xlIFt2YWx1ZV09XCJ3ZWF0aGVyRW51bS5zdW5cIj5cbiAgICAgICAgPGltZyBzcmM9XCIuL2Fzc2V0cy9leHRlbnNpb25zL1N1bi5wbmdcIiBhbHQ9XCJzdW5cIiB0aXRsZT1cInN1blwiIC8+XG4gICAgICA8L21hdC1idXR0b24tdG9nZ2xlPlxuICAgICAgPG1hdC1idXR0b24tdG9nZ2xlIFt2YWx1ZV09XCJ3ZWF0aGVyRW51bS5jbG91ZFwiPlxuICAgICAgICA8aW1nIHNyYz1cIi4vYXNzZXRzL2V4dGVuc2lvbnMvQ2xvdWQucG5nXCIgYWx0PVwiY2xvdWRcIiB0aXRsZT1cImNsb3VkXCIgLz5cbiAgICAgIDwvbWF0LWJ1dHRvbi10b2dnbGU+XG4gICAgICA8bWF0LWJ1dHRvbi10b2dnbGUgW3ZhbHVlXT1cIndlYXRoZXJFbnVtLnJhaW5cIj5cbiAgICAgICAgPGltZyBzcmM9XCIuL2Fzc2V0cy9leHRlbnNpb25zL1JhaW4ucG5nXCIgYWx0PVwicmFpblwiIHRpdGxlPVwicmFpblwiIC8+XG4gICAgICA8L21hdC1idXR0b24tdG9nZ2xlPlxuICAgICAgPG1hdC1idXR0b24tdG9nZ2xlIFt2YWx1ZV09XCJ3ZWF0aGVyRW51bS5zbm93XCI+XG4gICAgICAgIDxpbWcgc3JjPVwiLi9hc3NldHMvZXh0ZW5zaW9ucy9Tbm93LnBuZ1wiIGFsdD1cInNub3dcIiB0aXRsZT1cInNub3dcIiAvPlxuICAgICAgPC9tYXQtYnV0dG9uLXRvZ2dsZT5cbiAgICA8L21hdC1idXR0b24tdG9nZ2xlLWdyb3VwPlxuICA8L2Rpdj5cbjwvZGl2PlxuXG5MaWIgYmluZGluZyB0byAkbG9jYWxpemUgZ2xvYmFsIGZuIG91dHB1dCA6IHt7IHR0IH19XG5cbjxkaXYgKm5nSWY9XCJmYWxzZVwiPlxuICA8cD50ZW1wZXJhdHVyZSA6IHt7IHdlYXRoZXIudGVtcGVyYXR1cmUgfX08L3A+XG4gIDxwPnR5cGUgb2YgOiB7eyB3ZWF0aGVyRW51bVt3ZWF0aGVyLnR5cGVbMF1dIH19PC9wPlxuICA8cD50eXBlIG9mIDoge3sgd2VhdGhlckVudW1bd2VhdGhlci50eXBlWzFdXSB9fTwvcD5cbiAgPHA+dHlwZSBvZiA6IHt7IHdlYXRoZXJFbnVtW3dlYXRoZXIudHlwZVsyXV0gfX08L3A+XG4gIDxwPnR5cGUgb2YgOiB7eyB3ZWF0aGVyRW51bVt3ZWF0aGVyLnR5cGVbM11dIH19PC9wPlxuPC9kaXY+XG4iXX0=

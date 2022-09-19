@@ -1,0 +1,16 @@
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.temperatureLabel {
+  min-width: 10%;
+  text-align: right;
+  max-width: 20%;
+  margin-right: 5px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
