@@ -11,10 +11,12 @@
 <img [src]="logo" i18n-title title="Angular logo" alt="Angular logo" />
 
 <hr />
-<p>ici tests avec lib ... From main app</p>
+<p>ici tests pour lib ... From main app</p>
+<p>i18n with new key (FPM)</p>
 <span i18n="@@Resx.WeatherExtension.Celcius"
   >Resx.WeatherExtension.Celcius</span
 >
+<p>here is the actual library component usage</p>
 <lib-weather
   [multiple]="true"
   [weather]="weather"
@@ -23,26 +25,6 @@
 <hr />
 
 <br />
-<button type="button" (click)="inc(1)">+</button>
-<button type="button" (click)="inc(-1)">-</button>
-<span i18n
-  >Updated {minutes, plural, =0 {just now} =1 {one minute ago} other
-  {{{minutes}} minutes ago}}</span
->
-({{ minutes }}) <br /><br />
-<button type="button" (click)="male()">&#9794;</button>
-<button type="button" (click)="female()">&#9792;</button>
-<button type="button" (click)="other()">&#9895;</button>
-<span i18n
-  >The author is {gender, select, male {male} female {female} other
-  {other}}</span
->
-<br /><br />
-<span i18n
-  >Updated: {minutes, plural, =0 {just now} =1 {one minute ago} other
-  {{{minutes}} minutes ago by {gender, select, male {male} female {female} other
-  {other}}}}
-</span>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
