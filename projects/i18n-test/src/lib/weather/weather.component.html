@@ -1,4 +1,3 @@
-<p>weather works!</p>
 <div class="row">
   <mat-form-field class="temperatureLabel">
     <mat-label i18n="@@Resx.WeatherExtension.Temperature"
@@ -10,6 +9,7 @@
     >
   </mat-form-field>
 
+  <p>assets were left undone, so lookups on img fail as expected</p>
   <div>
     <mat-button-toggle-group
       #group="matButtonToggleGroup"
@@ -33,10 +33,12 @@
   </div>
 </div>
 
-{{ tt }}
+Lib binding to $localize global fn output : {{ tt }}
 
-<p>temperature : {{ weather.temperature }}</p>
-<p>type of : {{ weatherEnum[weather.type[0]] }}</p>
-<p>type of : {{ weatherEnum[weather.type[1]] }}</p>
-<p>type of : {{ weatherEnum[weather.type[2]] }}</p>
-<p>type of : {{ weatherEnum[weather.type[3]] }}</p>
+<div *ngIf="false">
+  <p>temperature : {{ weather.temperature }}</p>
+  <p>type of : {{ weatherEnum[weather.type[0]] }}</p>
+  <p>type of : {{ weatherEnum[weather.type[1]] }}</p>
+  <p>type of : {{ weatherEnum[weather.type[2]] }}</p>
+  <p>type of : {{ weatherEnum[weather.type[3]] }}</p>
+</div>
